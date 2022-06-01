@@ -1,0 +1,75 @@
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:url(/image/photo.jpg) no-repeat ;
+    background-size: cover;    
+     display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh; 
+}
+.title{
+    color: aqua;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.box{
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 5px 5px 5px rgba(2, 152, 198, 0.5);
+    background-color:goldenrod;
+    margin: 20px;
+    border-radius: 10%;
+}
+.email{
+    color:rgb(20, 2, 73);
+}
+input{
+    padding-top: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid silver;
+
+}
+input[type=submit]{
+    background-color: blue;
+     cursor: pointer; 
+}
+h1{
+    text-align: center;
+    margin-left:30px;
+    margin-top: 5px;
+}
+.pass{
+    color: rgb(20, 2, 73);
+    display: inline-block;
+}
+.login_form{
+    margin: 50px;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+
+}
+#log{
+    color:white;
+    padding:5px;
+    margin-top:20px;
+}
+#error-email,#error-password{
+    font-weight: normal;
+    display: inline;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 5px;
+    border:1px solid red;
+    background-color: rgba(239, 65, 65,0.4);
+    display: none;
+
+}
