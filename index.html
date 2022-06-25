@@ -5,9 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>log in</title>
-    <link rel="stylesheet" href="./login2.css">
-    <link rel="stylesheet" href="../">
-    <script src="./login2.js" defer></script>
+    
+    <style>
+        *{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:url(/image/photo.jpg) no-repeat ;
+    background-size: cover;    
+     display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 100vh; 
+}
+.title{
+    color: aqua;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.box{
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 5px 5px 5px rgba(2, 152, 198, 0.5);
+    background-color:goldenrod;
+    margin: 20px;
+    border-radius: 10%;
+}
+.email{
+    color:rgb(20, 2, 73);
+}
+input{
+    padding-top: 10px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid silver;
+
+}
+input[type=submit]{
+    background-color: blue;
+     cursor: pointer; 
+}
+h1{
+    text-align: center;
+    margin-left:30px;
+    margin-top: 5px;
+}
+.pass{
+    color: rgb(20, 2, 73);
+    display: inline-block;
+}
+.login_form{
+    margin: 50px;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+
+}
+#log{
+    color:white;
+    padding:5px;
+    margin-top:20px;
+}
+#error-email,#error-password{
+    font-weight: normal;
+    display: inline;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 5px;
+    border:1px solid red;
+    background-color: rgba(239, 65, 65,0.4);
+    display: none;
+
+}
+    </style>
+    
 </head>
 <body>
     <div class="contener">
@@ -34,5 +110,40 @@
             </div>
         </form>
     </div>
+    <script>
+        alert("hello");
+ const form = document.querySelector("#form");
+ const email = document.querySelector("#email");
+ const password = document.querySelector("#password");
+ const error = document.querySelector(".error");
+ form.addEventListener('submit',(e) =>{
+     e.preventDefault();
+     let error_message = [];
+     if(password.value.length <6){
+         error_message.push("password cannot be less than 6");
+         password.style.border='1px solid red';
+
+     }
+     if(email.value === ''){
+    
+         error_message.push('email cannot be empty');
+         email.style.border='1px solid red';}
+         else{
+             email.style.border='1px solid green';
+    
+         }
+        if(password.value === ''){
+        error_message.push('password must not empty');
+    password.style.border = '1px solid red';}
+
+            else{
+                 password.style.border='2px solid green';
+             }
+         error.style.color='red';
+         error.style.background='pink';
+         
+     error.textContent=error_message.join(',');
+ });
+    </script>
 </body>
 </html>
